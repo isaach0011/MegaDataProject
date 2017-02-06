@@ -6,6 +6,10 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BFDE0D0E1E490F0900DFA076 /* IntNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFDE0D0C1E490F0900DFA076 /* IntNode.cpp */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		BFDE0D001E49045E00DFA076 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -20,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		BFDE0D021E49045E00DFA076 /* MegaDataProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MegaDataProject; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFDE0D0C1E490F0900DFA076 /* IntNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IntNode.cpp; path = Model/IntNode.cpp; sourceTree = "<group>"; };
+		BFDE0D0D1E490F0900DFA076 /* IntNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IntNode.hpp; path = Model/IntNode.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +58,18 @@
 		BFDE0D041E49045E00DFA076 /* MegaDataProject */ = {
 			isa = PBXGroup;
 			children = (
+				BFDE0D0F1E490F1200DFA076 /* Model */,
 			);
 			path = MegaDataProject;
+			sourceTree = "<group>";
+		};
+		BFDE0D0F1E490F1200DFA076 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BFDE0D0C1E490F0900DFA076 /* IntNode.cpp */,
+				BFDE0D0D1E490F0900DFA076 /* IntNode.hpp */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,6 +129,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFDE0D0E1E490F0900DFA076 /* IntNode.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +256,7 @@
 				BFDE0D0B1E49045E00DFA076 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
