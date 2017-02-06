@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>350</x>
+      <y>200</y>
+      <w>370</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Timer
+--
+- executionTime : clock_t
+--
++startTimer()
++stopTimer()
++resetTimer()
++displaytTimerInformation()
++getExecutionTimeInMicroseconds()
+bg=magenta</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>790</x>
+      <y>200</y>
+      <w>380</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>IntNode
+--
+- nodeData : int
+- nodePointer : IntNode *
+--
++ getNodeData() : int
++ getNodePointer() : IntNode *
++ setNodeData(int value) : void
++ setNodePointer(IntNode * next) : void
+
++ IntNode() : constructor
++ IntNode(int value) : init
++ IntNode(int value, IntNode * nextNode) : init 
+
+
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>10</x>
+      <y>10</y>
+      <w>260</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Created by Isaac Hill
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
