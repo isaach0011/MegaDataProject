@@ -16,7 +16,7 @@ class IntNodeArray
 private:
     IntNode * front;
     int size;
-    
+                         
 public:
     IntNodeArray(int size);
     void setAtIndex(int index, int value);
