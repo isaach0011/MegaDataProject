@@ -22,6 +22,23 @@ IntNodeArray :: IntNodeArray(int size)
         current->setNodePointer(front);
         front = current;
     }
-    
-    
 }
+
+int IntNodeArray :: getFromIndex(int index)
+{
+    assert(index >= 0 && index < size);
+    int value = 0;
+
+    IntNode * current = front;
+    
+    for(int position = 0; position < index; position++)
+    {
+        current = current->getNodePointer();
+    }
+    
+    value = current->getNodeData();
+    
+    return value;
+}
+
+

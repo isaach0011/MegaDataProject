@@ -20,7 +20,7 @@ private:
 public:
     IntNodeArray(int size);
     void setAtIndex(int index, int value);
-    int getFrameIndex(int index);
+    int getFromIndex(int index);
     int getSize();
 };
 
