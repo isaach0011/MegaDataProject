@@ -31,6 +31,7 @@
 		BF1B4C801E4BB2030020A9DA /* DataStructureController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DataStructureController.cpp; path = Controller/DataStructureController.cpp; sourceTree = "<group>"; };
 		BF1B4C811E4BB2030020A9DA /* DataStructureController.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = DataStructureController.hpp; path = Controller/DataStructureController.hpp; sourceTree = "<group>"; };
 		BF1B4C841E4BB21C0020A9DA /* NodeRunner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NodeRunner.cpp; path = Controller/NodeRunner.cpp; sourceTree = "<group>"; };
+		BF7600AA1E523E96004918CB /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Node.hpp; path = Model/Node.hpp; sourceTree = "<group>"; };
 		BFDE0D021E49045E00DFA076 /* MegaDataProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MegaDataProject; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDE0D0C1E490F0900DFA076 /* IntNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IntNode.cpp; path = Model/IntNode.cpp; sourceTree = "<group>"; };
 		BFDE0D0D1E490F0900DFA076 /* IntNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IntNode.hpp; path = Model/IntNode.hpp; sourceTree = "<group>"; };
@@ -89,6 +90,7 @@
 				BFDE0D0D1E490F0900DFA076 /* IntNode.hpp */,
 				BF1B4C7D1E4BA92F0020A9DA /* IntNodeArray.cpp */,
 				BF1B4C7E1E4BA92F0020A9DA /* IntNodeArray.hpp */,
+				BF7600AA1E523E96004918CB /* Node.hpp */,
 			);
 			name = Model;
 			sourceTree = "<group>";
