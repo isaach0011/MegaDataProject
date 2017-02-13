@@ -26,4 +26,59 @@ public:
     Node<Type> * getNodePointer();
 };
 
+/*
+ Implementation section
+ */
+
+template <class Type>
+Node<Type> :: Node()
+{
+    //Explicitly DO NOT instantiate the nodeData data member
+    this->nodePointer = nullptr;
+}
+
+template <class Type>
+Node<Type> :: Node(Type data)
+{
+    this->nodeData = data;
+    this->nodePointer = nullptr;
+}
+
+template <class Type>
+Node<Type> :: Node(Type data, Node<Type> * next)
+{
+    this->nodeData = data;
+    this->nodePointer = next;
+}
+
+template <class Type>
+void Node<Type> ::setNodeData(Type newValue)
+{
+    nodeData = newValue;
+}
+
+template <class Type>
+void Node<Type> :: setNodePointer(Node<Type> * pointer)
+{
+    this->nodePointer = pointer;
+}
+
+template <class Type>
+int Node<Type> :: getNodeData()
+{
+    return nodeData;
+}
+
+template <class Type>
+Node<Type> * Node :: getNodePointer()
+{
+    return this->nodePointer;
+}
+
+
+
+
+
+
+
 #endif /* Node_h */
