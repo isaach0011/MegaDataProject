@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>350</x>
-      <y>200</y>
+      <x>60</x>
+      <y>330</y>
       <w>370</w>
       <h>200</h>
     </coordinates>
@@ -24,10 +24,10 @@ bg=magenta</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>790</x>
-      <y>200</y>
+      <x>500</x>
+      <y>80</y>
       <w>380</w>
-      <h>230</h>
+      <h>200</h>
     </coordinates>
     <panel_attributes>IntNode
 --
@@ -62,10 +62,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>780</x>
-      <y>480</y>
+      <x>980</x>
+      <y>90</y>
       <w>340</w>
-      <h>260</h>
+      <h>150</h>
     </coordinates>
     <panel_attributes>IntNodeArray
 --
@@ -76,7 +76,61 @@ bg=green</panel_attributes>
 + IntNodeArray(int size) : constructor
 + setAtIndex(int index, int value) : void
 + getFromIndex(int index) : int
-+ getSize() : int</panel_attributes>
++ getSize() : int
+bg=blue</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>460</x>
+      <y>320</y>
+      <w>450</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>Node&lt;Type&gt;
+--
+Data Members
+- nodeData : Type
+- nodePointer : Node&lt;Type&gt; *
+--
+Constructors
++ Node() : constructor
++ Node(Type value) : constructor
++ Node(Type data, Node&lt;Type&gt; * pointer) : constructor
+
+Methods
++ getNodeData() : Type
++ getNodePointer() : Node&lt;Type&gt; *
++ setNodeData(Type data) : void
++ setNodePointer(Node&lt;Type&gt; * next) : void
+
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>450</x>
+      <y>10</y>
+      <w>900</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>EmptyPackage
+--
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>870</x>
+      <y>160</y>
+      <w>130</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+1..n</panel_attributes>
+    <additional_attributes>110.0;20.0;10.0;20.0</additional_attributes>
   </element>
 </diagram>
