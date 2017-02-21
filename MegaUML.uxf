@@ -5,7 +5,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>60</x>
-      <y>330</y>
+      <y>120</y>
       <w>370</w>
       <h>200</h>
     </coordinates>
@@ -25,7 +25,7 @@ bg=magenta</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>500</x>
-      <y>80</y>
+      <y>70</y>
       <w>380</w>
       <h>200</h>
     </coordinates>
@@ -51,7 +51,7 @@ bg=red</panel_attributes>
     <id>UMLNote</id>
     <coordinates>
       <x>10</x>
-      <y>10</y>
+      <y>0</y>
       <w>260</w>
       <h>40</h>
     </coordinates>
@@ -63,7 +63,7 @@ bg=green</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>980</x>
-      <y>90</y>
+      <y>80</y>
       <w>340</w>
       <h>150</h>
     </coordinates>
@@ -83,8 +83,8 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>460</x>
-      <y>320</y>
+      <x>160</x>
+      <y>390</y>
       <w>450</w>
       <h>280</h>
     </coordinates>
@@ -112,7 +112,7 @@ bg=red</panel_attributes>
     <id>UMLPackage</id>
     <coordinates>
       <x>450</x>
-      <y>10</y>
+      <y>0</y>
       <w>900</w>
       <h>300</h>
     </coordinates>
@@ -125,12 +125,56 @@ bg=orange</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>870</x>
-      <y>160</y>
+      <y>150</y>
       <w>130</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 1..n</panel_attributes>
     <additional_attributes>110.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>730</x>
+      <y>360</y>
+      <w>520</w>
+      <h>330</h>
+    </coordinates>
+    <panel_attributes>Array&lt;Type&gt;
+--
+Data Members
+
+- front : Node&lt;Type&gt; * 
+- size : int
+--
+Constructors
++ Array() : constructor
++ Array(int size) : constructor
+
+Methods
+
++ ~Array&lt;Type&gt;() : destrucotr
++ Array&lt;Type&gt;(const Array&lt;Type&gt; &amp; toBeCopied : copy constructor
+
++ getSize() const : int
++ getFront() const : Node&lt;Type&gt; * 
+
++ setAtIndex(int index, Type value) : void
++ getFrome Index(int index) : Type
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>520</y>
+      <w>150</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+1..n</panel_attributes>
+    <additional_attributes>130.0;20.0;10.0;20.0</additional_attributes>
   </element>
 </diagram>
