@@ -48,4 +48,12 @@ List<Type :: List(const List<Type> & source)
 {
     
 }
+
+template <class Type>
+List<Type :: ~List()
+{
+    
+}
+
+
 #endif /* List_hpp */

@@ -4,10 +4,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>60</x>
-      <y>120</y>
-      <w>370</w>
-      <h>200</h>
+      <x>90</x>
+      <y>60</y>
+      <w>320</w>
+      <h>130</h>
     </coordinates>
     <panel_attributes>Timer
 --
@@ -83,10 +83,10 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>160</x>
-      <y>390</y>
+      <x>0</x>
+      <y>340</y>
       <w>450</w>
-      <h>280</h>
+      <h>240</h>
     </coordinates>
     <panel_attributes>Node&lt;Type&gt;
 --
@@ -125,19 +125,19 @@ bg=orange</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>870</x>
-      <y>150</y>
+      <y>160</y>
       <w>130</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-1..n</panel_attributes>
-    <additional_attributes>110.0;20.0;10.0;20.0</additional_attributes>
+m2=1..n</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>730</x>
-      <y>360</y>
+      <x>520</x>
+      <y>310</y>
       <w>520</w>
       <h>330</h>
     </coordinates>
@@ -168,13 +168,53 @@ bg=pink</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>600</x>
-      <y>520</y>
-      <w>150</w>
+      <x>440</x>
+      <y>480</y>
+      <w>100</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-1..n</panel_attributes>
-    <additional_attributes>130.0;20.0;10.0;20.0</additional_attributes>
+m2=1..n</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>690</y>
+      <w>450</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>Model :: List&lt;Type&gt;
+--
+- size : int
+- front : Node&lt;Type&gt; *
+--
++ List&lt;Type&gt;() : constructor
++ List&lt;Type&gt;(const List&lt;Type&gt; &amp; source) : copy constructor
++ ~List&lt;Type&gt;() : deconstructor
+
++ addAtIndex(int index, Type value) : void
++ add(Type value) : void
++ remove(int index) : Type
++ setAtIndex(int index, Type data) : Type
++ getFromIndex(int index) : Type
++ contains(Type data) : bool
++ getSize() const : int
++ getFront() const : Node&lt;Type&gt; *
+bg=magenta</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>550</y>
+      <w>140</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=0..n</panel_attributes>
+    <additional_attributes>120.0;300.0;50.0;300.0;50.0;10.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
