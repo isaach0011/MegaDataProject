@@ -96,8 +96,33 @@ Type Array<Type> :: getFromIndex(int index)
 }
 
 template <class type>
-int Array<Type> :: getSize()
+int Array<Type> :: getSize() const
 {
     return size;
+}
+    
+    
+    
+    
+    
+template <class Type>
+Array<Type> :: ~Array()
+{
+    int count = size;
+    Node<Type> * remove = front;
+    while(front != nullptr)
+    {
+        //Move to next node in array
+        front = front->getNodePOinter();
+        cout << "Moving to next node. At: " << count << endl;
+        //Delete the front pointer
+        delete remove;
+        cout << "Deleting the old front pointer." << endl;
+        //Move delete to the new front.
+        remove = front;
+        cout << "Moving to new front pointer." << endl;
+        count--;
+        cout << "Front is at : " << front << " count is: " << count << endl;
+    }
 }
 #endif /* Array_hpp */
