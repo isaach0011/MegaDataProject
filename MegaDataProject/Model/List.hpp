@@ -27,7 +27,8 @@ public:
     ~List<Type>();
   
     void addAtIndex(int index, Type value);
-    void add(Type value);
+    void addFront(Type value);
+    void addEnd(Type value);
     Type remove(int index);
     Type setAtIndex(int index, Type data);
     Type getFromIndex(int index);

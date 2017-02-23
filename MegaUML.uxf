@@ -195,7 +195,8 @@ m2=1..n</panel_attributes>
 + ~List&lt;Type&gt;() : deconstructor
 
 + addAtIndex(int index, Type value) : void
-+ add(Type value) : void
++ addFront(Type value) : void
++ addEnd(Type value) : void
 + remove(int index) : Type
 + setAtIndex(int index, Type data) : Type
 + getFromIndex(int index) : Type
