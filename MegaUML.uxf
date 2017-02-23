@@ -105,7 +105,7 @@ Methods
 + setNodeData(Type data) : void
 + setNodePointer(Node&lt;Type&gt; * next) : void
 
-bg=red</panel_attributes>
+bg=pink</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -162,7 +162,7 @@ Methods
 
 + setAtIndex(int index, Type value) : void
 + getFrome Index(int index) : Type
-bg=pink</panel_attributes>
+bg=magenta</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -203,7 +203,7 @@ m2=1..n</panel_attributes>
 + contains(Type data) : bool
 + getSize() const : int
 + getFront() const : Node&lt;Type&gt; *
-bg=magenta</panel_attributes>
+bg=red</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
