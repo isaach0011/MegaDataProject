@@ -78,11 +78,11 @@ void DataStructureController :: testAdvancedFeatures()
 
 void DataStructureController :: testLists()
 {
-    List<int> sample;
-    sample.addFront(2);
-    sample.addEnd(3);
-    sample.addFront(1);
-    cout << "This should go 1, 2, 3" << endl;
+    List<string> sample;
+    sample.addFront("am");
+    sample.addEnd("cool");
+    sample.addFront("I");
+    cout << "This should go I, am, cool" << endl;
     
     for(int index = 0; index < sample.getSize(); index++)
     {
