@@ -46,7 +46,9 @@ public:
 template <class Type>
 List<Type> :: List()
 {
-    
+    this->size = 0;
+    this->front = nullptr;
+    this->end = nullptr;
 }
 
 template <class Type>
@@ -58,17 +60,15 @@ List<Type> :: List(const List<Type> & source)
 template <class Type>
 List<Type> :: ~List()
 {
-    
+    Node<Type> * destruction = front;
+    while(front != nullptr)
+    {
+        front = front->getNodePointer();
+        delete destruction;
+        destruction = front;
+    }
 }
 
-template <class Type>
-List<Type> :: List<Type>& operator =(const List<Type> & replacingList)
-{
-    
-}
-
-template <class Type>
-List<Type>
 template <class Type>
 void List<Type> :: addAtIndex(int index, Type value)
 {
@@ -86,7 +86,7 @@ void List<Type> :: addAtIndex(int index, Type value)
     {
         Node<Type> * insertedNode = new Node<Type>(value);
         Node<Type> * current = front;
-        Node<Type> * pervious = nullptr;
+        Node<Type> * previous = nullptr;
         
         for(int position = 0; position < index; position++)
         {
@@ -114,7 +114,7 @@ void List<Type> :: addFront(Type value)
     {
         Node<Type> * newFirst = new Node<Type>();
         newFirst->setNodeData(value);
-        newFirst->NodePointer(front);
+        newFirst->setNodePointer(front);
         
         this->front = newFirst;
     }
@@ -154,11 +154,11 @@ Type List<Type> :: remove(int index)
         toBeRemoved = front;
         this->front = front->getNodePointer();
     }
-    else if(idnex == size - 1)
+    else if(index == size - 1)
     {
         for(int spot = 0; spot < index; spot++)
         {
-            pervious = current;
+            previous = current;
             current = current->getNodePointer();
         }
         
@@ -190,58 +190,73 @@ Type List<Type> :: remove(int index)
 template <class Type>
 Type List<Type> :: setAtIndex(int index, Type data)
 {
-    assert(index >= 0 && index < size)
+    assert(index >= 0 && index < size);
     Type removedData;
     
-    if(index == 0)
+    Node<Type> * current = front;
+    
+    for(int spot = 0; spot < index; spot++)
     {
-        addFront(value);
+        current = current->getNodePointer();
     }
-    else if(index == size)
-    {
-        addEnd(value);
-    }
-    else
-    {
-        Node<Type> * insertedNode = new Node<Type>(value);
-        Node<Type> * current = front;
-        Node<Type> * pervious = nullptr;
-        
-        for(int position = 0; position < index; position++)
-        {
-            previous = current;
-            current = current->getNodePointer();
-        }
-        
-        previous->setNodePointer(insertedNode);
-        insertedNode->setNodePointer(current);
-        
-        size++;
-    }
+    
+    removedData = current->getNodeData();
+    current->setNodeData(data);
+    
+    return removedData;
 }
 
 template <class Type>
 Type List<Type> ::getFromIndex(int index)
 {
+    assert(index >= 0 && index < size);
+    Type information;
     
+    Node<Type> * current = front;
+    for (int position = 0; position < index; position ++)
+    {
+        current = current->getNodePointer();
+    }
+    
+    information = current->getNodeData();
+    
+    return information;
 }
 
 template <class Type>
-bool List<Type> :: conatins(Type data)
+bool List<Type> :: contains(Type data)
 {
+    bool isInList = false;
+    Node<Type> * current = front;
     
+    for (int index = 0; index < size; index++)
+    {
+        if (current->getNodeData == data)
+        {
+            isInList = true;
+            return isInList;
+        }
+    }
+    
+    return isInList;
 }
 
 template <class Type>
 int List<Type> :: getSize() const
 {
-    
+    return this->size;
 }
 
 template <class Type>
 Node<Type> * List<Type> :: getFront() const
 {
-    
+    return this->front;
+}
+
+template <class Type>
+Node<Type> * List<Type> :: getEnd() const
+{
+    return this->end;
 }
 
 #endif /* List_hpp */

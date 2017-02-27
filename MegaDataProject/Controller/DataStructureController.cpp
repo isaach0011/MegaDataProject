@@ -33,6 +33,7 @@ void DataStructureController :: start()
     testIntArray();
     cout << "Switching to advanced feature testing" << endl;
     testAdvancedFeatures();
+    testLists();
     cout << "Finish testing" << endl;
 }
 
@@ -73,4 +74,20 @@ void DataStructureController :: testAdvancedFeatures()
     words.setAtIndex(0, "at zero");
     words.setAtIndex(3, "in the last spot");
     Array<string> copiedWords = Array<string>(words);
+}
+
+void DataStructureController :: testLists()
+{
+    List<int> sample;
+    sample.addFront(2);
+    sample.addEnd(3);
+    sample.addFront(1);
+    cout << "This should go 1, 2, 3" << endl;
+    
+    for(int index = 0; index < sample.getSize(); index++)
+    {
+        cout << sample.getFromIndex(index) << endl;
+    }
+    
+    cout << "Size should read 3 and is " << sample.getSize() << endl;
 }
