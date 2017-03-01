@@ -6,8 +6,8 @@
 //  Copyright © 2017 Hill, Isaac. All rights reserved.
 //
 
-#ifndef DoublyLinkedList_h
-#define DoublyLinkedList_h
+#ifndef DoublyLinkedList_hpp
+#define DoublyLinkedList_hpp
 
 #include "BiDirecitonalNode.hpp"
 
@@ -56,4 +56,4 @@ BiDirectionalNode<Type> * DoublyLinkedList<Type> :: getEnd() const
     return end;
 }
 
-#endif /* DoublyLinkedList_h */
+#endif /* DoublyLinkedList_hpp */

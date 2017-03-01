@@ -6,8 +6,8 @@
 //  Copyright © 2017 Hill, Isaac. All rights reserved.
 //
 
-#ifndef Queue_h
-#define Queue_h
+#ifndef Queue_hpp
+#define Queue_hpp
 
 
-#endif /* Queue_h */
+#endif /* Queue_hpp */

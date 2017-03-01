@@ -6,8 +6,8 @@
 //  Copyright © 2017 Hill, Isaac. All rights reserved.
 //
 
-#ifndef BiDirectionalNode_h
-#define BiDirectionalNode_h
+#ifndef BiDirectionalNode_hpp
+#define BiDirectionalNode_hpp
 
 template <class Type>
 class BiDirectionalNode : public Node<Type>
@@ -34,4 +34,4 @@ BiDirectionalNode<Type> :: BiDirectionalNode(Type data) : Node<Type>(data)
 {
     
 }
-#endif /* BiDirectionalNode_h */
+#endif /* BiDirectionalNode_hpp */
