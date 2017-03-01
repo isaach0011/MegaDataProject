@@ -33,6 +33,7 @@
 		BF1B4C811E4BB2030020A9DA /* DataStructureController.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = DataStructureController.hpp; path = Controller/DataStructureController.hpp; sourceTree = "<group>"; };
 		BF1B4C841E4BB21C0020A9DA /* NodeRunner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NodeRunner.cpp; path = Controller/NodeRunner.cpp; sourceTree = "<group>"; };
 		BF2C62571E64C71300A9260C /* BiDirectionalNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = BiDirectionalNode.hpp; path = Model/BiDirectionalNode.hpp; sourceTree = "<group>"; };
+		BF66532D1E675D2500660272 /* DoublyLinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = DoublyLinkedList.hpp; path = Model/DoublyLinkedList.hpp; sourceTree = "<group>"; };
 		BF7600AA1E523E96004918CB /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Node.hpp; path = Model/Node.hpp; sourceTree = "<group>"; };
 		BFC66AE81E5CD9CE00A93AC2 /* List.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = List.hpp; path = Model/List.hpp; sourceTree = "<group>"; };
 		BFDE0D021E49045E00DFA076 /* MegaDataProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MegaDataProject; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +60,17 @@
 				BF1B4C841E4BB21C0020A9DA /* NodeRunner.cpp */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		BF66532B1E675CDD00660272 /* Sample Single Type */ = {
+			isa = PBXGroup;
+			children = (
+				BFDE0D0C1E490F0900DFA076 /* IntNode.cpp */,
+				BFDE0D0D1E490F0900DFA076 /* IntNode.hpp */,
+				BF1B4C7D1E4BA92F0020A9DA /* IntNodeArray.cpp */,
+				BF1B4C7E1E4BA92F0020A9DA /* IntNodeArray.hpp */,
+			);
+			name = "Sample Single Type";
 			sourceTree = "<group>";
 		};
 		BFDE0CF91E49045E00DFA076 = {
@@ -89,14 +101,12 @@
 		BFDE0D0F1E490F1200DFA076 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BFDE0D0C1E490F0900DFA076 /* IntNode.cpp */,
-				BFDE0D0D1E490F0900DFA076 /* IntNode.hpp */,
-				BF1B4C7D1E4BA92F0020A9DA /* IntNodeArray.cpp */,
-				BF1B4C7E1E4BA92F0020A9DA /* IntNodeArray.hpp */,
+				BF66532B1E675CDD00660272 /* Sample Single Type */,
 				BF7600AA1E523E96004918CB /* Node.hpp */,
 				BF1AE2C11E5627AF007B843B /* Array.hpp */,
 				BFC66AE81E5CD9CE00A93AC2 /* List.hpp */,
 				BF2C62571E64C71300A9260C /* BiDirectionalNode.hpp */,
+				BF66532D1E675D2500660272 /* DoublyLinkedList.hpp */,
 			);
 			name = Model;
 			sourceTree = "<group>";
