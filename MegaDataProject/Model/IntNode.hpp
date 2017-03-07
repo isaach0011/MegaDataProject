@@ -25,10 +25,10 @@ public:
     
     //Methods
     int getNodeData();
-    IntNode * getNodePointer();
+    IntNode * getNextPointer();
     
     void setNodeData(int value);
-    void setNodePointer(IntNode * next);
+    void setNextPointer(IntNode * next);
 };
 
 #endif /* IntNode_hpp */

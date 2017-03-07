@@ -31,7 +31,7 @@ void IntNode :: setNodeData(int newValue)
     nodeData = newValue;
 }
 
-void IntNode :: setNodePointer(IntNode * nodePointer)
+void IntNode :: setNextPointer(IntNode * nodePointer)
 {
     this->nodePointer = nodePointer;
 }
@@ -41,7 +41,7 @@ int IntNode :: getNodeData()
     return nodeData;
 }
 
-IntNode * IntNode :: getNodePointer()
+IntNode * IntNode :: getNextPointer()
 {
     return this->nodePointer;
 }

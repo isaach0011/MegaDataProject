@@ -21,9 +21,9 @@ DataStructureController :: DataStructureController()
 void DataStructureController :: testNodes()
 {
     cout << "The contents of the node<String>" << endl;
-    cout << wordNode.getNodePointer() << endl;
+    cout << wordNode.getNextPointer() << endl;
     cout << "Here is the node<int>" << endl;
-    cout << numberNode.getNodePointer() << endl;
+    cout << numberNode.getNextPointer() << endl;
 }
 void DataStructureController :: start()
 {
