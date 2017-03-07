@@ -27,8 +27,6 @@ public:
     int getSize() const;
     BiDirectionalNode<Type> * getFront() const;
     BiDirectionalNode<Type> * getEnd() const;
-    void setFront(BiDirectionalNode<Type> * font);
-    void setSize(int updated);
     
     void setFront(BiDirectionalNode<Type> * front);
     void setSize(int updated);
