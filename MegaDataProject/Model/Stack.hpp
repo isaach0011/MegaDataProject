@@ -21,7 +21,7 @@ public:
     Type pop();
     Type peek();
     void push(Type data);
-}
+};
 
 template <class Type>
 Stack<Type> :: Stack() : DoublyLinkedList<Type>()
@@ -73,7 +73,7 @@ Type Stack<Type> :: remove(int index)
     return pop();
 }
 
-template <class Type.
+template <class Type>
 Type Stack<Type> :: peek()
 {
     assert(this->getSize() > 0);
@@ -86,12 +86,12 @@ Type Stack<Type> :: pop()
     assert(this->getSize() > 0);
     Type removed = this->getEnd()->getNodeData();
     
-    BiDirecitonalNode<Type> * update = this->getEnd();
+    BiDirectionalNode<Type> * update = this->getEnd();
     update = update->getPreviousPointer();
     
     if(update != nullptr)
     {
-        udpate->setNextPointer(nullptr);
+        update->setNextPointer(nullptr);
     }
     
     delete this->getEnd();

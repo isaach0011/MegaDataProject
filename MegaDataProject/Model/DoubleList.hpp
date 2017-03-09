@@ -6,8 +6,10 @@
 //  Copyright © 2017 Hill, Isaac. All rights reserved.
 //
 
-#ifndef DoubleList_h
-#define DoubleList_h
+#ifndef DoubleList_hpp
+#define DoubleList_hpp
+
+#include "DoublyLinkedList.hpp"
 
 template <class Type>
 class DoubleList : public DoublyLinkedList<Type>
@@ -25,7 +27,7 @@ public:
 };
 
 template <class Type>
-DoubleList<TYpe> :: DoubleList() : DoublyLinkedList<Type>()
+DoubleList<Type> :: DoubleList() : DoublyLinkedList<Type>()
 {
     
 }
@@ -36,9 +38,9 @@ DoubleList<Type> :: ~DoubleList()
     BiDirectionalNode<Type> * deleteStructure = this->getFront();
     while(this->getFront != nullptr)
     {
-        this->setFront(this->getFront()->getNextPOinter());
-        delete deleteStrucutre;
-        deleteStrucuture = this->getFront();
+        this->setFront(this->getFront()->getNextPointer());
+        delete deleteStructure;
+        deleteStructure = this->getFront();
     }
 }
 
@@ -52,7 +54,7 @@ void DoubleList<Type> :: add(Type value)
     }
     else
     {
-        this->getEnd->setNextPOinter(addedNode);
+        this->getEnd->setNextPointer(addedNode);
         addedNode->setPreviousPointer(this->getEnd());
     }
     this->setEnd(addedNode);
@@ -83,7 +85,7 @@ Type DoubleList<Type> :: remove(int index)
 }
 
 template <class Type>
-Type DoubleList<TYpe> :: getFromIndexFast(int index)
+Type DoubleList<Type> :: getFromIndexFast(int index)
 {
     assert(index >= 0 && index < this->getSize());
     Type valueAtIndex;
@@ -101,11 +103,11 @@ Type DoubleList<TYpe> :: getFromIndexFast(int index)
         reference = this->getEnd();
         for(int position = this->getSize() - 1; position > index; position--)
         {
-            reference = reference =>getPreviousPointer();
+            reference = reference->getPreviousPointer();
         }
     }
     
     valueAtIndex = reference->getNodeData();
     return valueAtIndex;
 }
-#endif /* DoubleList_h */
+#endif /* DoubleList_hpp */

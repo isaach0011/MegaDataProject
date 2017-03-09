@@ -33,7 +33,7 @@ Queue<Type> :: Queue() : DoublyLinkedList<Type>()
 template <class Type>
 Queue<Type> :: ~Queue()
 {
-    BiDirecitonalNode<Type> * remove = this->getFront();
+    BiDirectionalNode<Type> * remove = this->getFront();
     while(this->getFront () != nullptr)
     {
         this->setFront(this->getFront()->getNextPointer());
@@ -43,7 +43,7 @@ Queue<Type> :: ~Queue()
 }
 
 template <class Type>
-void Queue<Type> :; add(Type value)
+void Queue<Type> :: add(Type value)
 {
     enqueue(value);
 }
