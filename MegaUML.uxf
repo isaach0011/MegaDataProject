@@ -447,7 +447,7 @@ bg=red</panel_attributes>
       <x>840</x>
       <y>642</y>
       <w>186</w>
-      <h>126</h>
+      <h>144</h>
     </coordinates>
     <panel_attributes>Model :: DoubleList&lt;Type&gt;
 --

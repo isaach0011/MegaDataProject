@@ -41,17 +41,25 @@ void Stack<Type> :: add(Type valueToAdd)
     push(valueToAdd);
 }
 
+/*
+ Adds the supplied object to the stack to the end.
+ Set new object to point to end.
+ 
+ Adjusts the end pointer to reflect the new end of the stack.
+ Increases the size by 1.
+ */
 template <class Type>
 void Stack<Type> :: push(Type addedThing)
 {
     BiDirectionalNode<Type> * addToStack = new BiDirectionalNode<Type>(addedThing);
+    
     if(this->getSize() == 0 || this->getFront() == nullptr || this->getEnd() == nullptr)
     {
         this->setFront(addToStack);
     }
     else
     {
-        this->getEnd()->setNextPointer(addToStack) ;
+        this->getEnd()->setNextPointer(addToStack);
         addToStack->setPreviousPointer(this->getEnd());
     }
     this->setEnd(addToStack);
