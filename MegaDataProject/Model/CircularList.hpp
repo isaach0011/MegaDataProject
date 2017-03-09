@@ -9,6 +9,8 @@
 #ifndef CircularList_hpp
 #define CircularList_hpp
 
+#include "DoublyLinkedList.hpp"
+
 template <class Type>
 class CircularList : public DoublyLinkedList<Type>
 {
@@ -26,7 +28,7 @@ public:
 };
 
 template <class Type>
-CircularList<Type> :: CircularList() : DoublyLinkedList();
+CircularList<Type> :: CircularList() : DoublyLinkedList<Type>()
 {
     //deal with circle list stuff only here
 }

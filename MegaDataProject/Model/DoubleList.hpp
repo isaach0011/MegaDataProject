@@ -36,12 +36,28 @@ template <class Type>
 DoubleList<Type> :: ~DoubleList()
 {
     BiDirectionalNode<Type> * deleteStructure = this->getFront();
-    while(this->getFront != nullptr)
+    while(this->getFront() != nullptr)
     {
         this->setFront(this->getFront()->getNextPointer());
         delete deleteStructure;
         deleteStructure = this->getFront();
     }
+}
+
+template <class Type>
+Type DoubleList<Type> :: getFromIndex(int index)
+{
+    assert(index >= 0 && index < this->getSize());
+    Type valueAtIndex;
+    
+    BiDirectionalNode<Type> * reference = this->getFront();
+    for(int position = 0; position < index; position++)
+    {
+        reference = reference->getNextPointer();
+    }
+    valueAtIndex = reference->getNodeData();
+    
+    return valueAtIndex;
 }
 
 template <class Type>
@@ -54,7 +70,7 @@ void DoubleList<Type> :: add(Type value)
     }
     else
     {
-        this->getEnd->setNextPointer(addedNode);
+        this->getEnd()->setNextPointer(addedNode);
         addedNode->setPreviousPointer(this->getEnd());
     }
     this->setEnd(addedNode);
@@ -68,7 +84,7 @@ Type DoubleList<Type> :: remove(int index)
     BiDirectionalNode<Type> * nodeToTakeOut = this->getFront();
     for(int spot = 0; spot < index; spot++)
     {
-        nodeToTakeOut = nodeToTakeOut->getNextPOinter();
+        nodeToTakeOut = nodeToTakeOut->getNextPointer();
     }
     derp = nodeToTakeOut->getNodeData();
     
@@ -80,7 +96,7 @@ Type DoubleList<Type> :: remove(int index)
     
     delete nodeToTakeOut;
     
-    this->setSize(this->getSize() -=1);
+    this->setSize(this->getSize() - 1);
     return derp;
 }
 

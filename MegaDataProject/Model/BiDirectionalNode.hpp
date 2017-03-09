@@ -14,7 +14,7 @@ class BiDirectionalNode : public Node<Type>
 {
 private:
     BiDirectionalNode<Type> * previous;
-    BiDirectionalNode<Type> * next;
+    BiDirectionalNode<Type> * nextPointer;
     Type data;
 public:
     BiDirectionalNode();
