@@ -103,7 +103,7 @@ Type Queue<Type> :: remove(int index)
 template <class Type>
 Type Queue<Type> :: dequeue()
 {
-    assert(this->getSize > 0);
+    assert(this->getSize() > 0);
     Type removedValue = this->getFront()->getNodeData();
     BiDirectionalNode<Type> * removeMe = this->getFront();
     if(this->getSize() == 1)
@@ -119,7 +119,7 @@ Type Queue<Type> :: dequeue()
     delete removeMe;
     this->setSize(this->getSize() - 1);
     
-    return removedValue();
+    return removedValue;
 }
 
 template <class Type>

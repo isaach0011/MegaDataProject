@@ -19,6 +19,7 @@
 #include "../Model/Stack.hpp"
 #include "../Model/Queue.hpp"
 #include "../Model/CircularList.hpp"
+#include "../Model/FoodItem.hpp"
 #include <string>
 
 using namespace std;
@@ -34,6 +35,7 @@ private:
     void testAdvancedFeatures();
     void testLists();
     void testListTiming();
+    void testFoodQueue();
     
 public:
     DataStructureController();

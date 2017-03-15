@@ -27,6 +27,7 @@ void DataStructureController :: testNodes()
 void DataStructureController :: start()
 {
     testListTiming();
+    testFoodQueue();
 }
 
 void DataStructureController :: testIntArray()
@@ -124,4 +125,17 @@ void DataStructureController :: testListTiming()
     
     cout << "The average speed for the getFromIndex method was: " << averageSlow << " microseconds." << endl;
     cout << "The average speed for the getFromIndexFast method was: " << averageFast << " microseconds." << endl;
+}
+
+void DataStructureController :: testFoodQueue()
+{
+    Queue<FoodItem> tastyFood;
+    FoodItem rice("rice");
+    
+    tastyFood.enqueue(rice);
+    FoodItem bread;
+    tastyFood.add(bread);
+    
+    FoodItem removed = tastyFood.dequeue();
+    cout << "The item removed form the queue was " << "___" << " and should be bread." << endl;
 }
