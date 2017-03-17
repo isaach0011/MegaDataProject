@@ -127,15 +127,51 @@ void DataStructureController :: testListTiming()
     cout << "The average speed for the getFromIndexFast method was: " << averageFast << " microseconds." << endl;
 }
 
+void DataStructureController :: testIntStack()
+{
+    Stack<int> numberStack;
+    numberStack.add(2315);
+    numberStack.push(32);
+    int testValue = numberStack.pop();
+    cout << "Test value is " << testValue << " and should be 32" << endl;
+}
+
 void DataStructureController :: testFoodQueue()
 {
     Queue<FoodItem> tastyFood;
     FoodItem rice("rice");
+    FoodItem cookies("cookies");
+    FoodItem tacos("tacos");
+    FoodItem duncanrice("duncanrice");
+    FoodItem bread("bread");
+    FoodItem fries("fries");
+    FoodItem burger("burger");
+    FoodItem burrito("burrito");
+    FoodItem food("food");
     
     tastyFood.enqueue(rice);
-    FoodItem bread;
-    tastyFood.add(bread);
+    tastyFood.enqueue(bread);
+    tastyFood.add(duncanrice);
+    tastyFood.dequeue();
+    tastyFood.enqueue(fries);
+    tastyFood.add(cookies);
     
+    fries.setCalories(999999);
+    
+    cout << "The size of the list is " << tastyFood.getSize() << "." << endl;
+    cout << "The fries seem very unhealthy. Their calorie count is " << fries.getCalories() << "." << endl;
+    
+    tastyFood.remove(0);
+    
+    cout << "The size of the list is " << tastyFood.getSize() << "." << endl;
+    
+    tastyFood.enqueue(tacos);
+    tastyFood.enqueue(burger);
+    tastyFood.add(burrito);
+    tastyFood.enqueue(food);
+
     FoodItem removed = tastyFood.dequeue();
-    cout << "The item removed form the queue was " << "___" << " and should be bread." << endl;
+    cout << "The item removed form the queue was " << removed.getFoodName() << " and should be duncanrice." << endl;
+    cout << "The front of the list is " << tastyFood.peek().getFoodName() << ", it should be fries." << endl;
+    cout << "The size of the list is " << tastyFood.getSize() << "." << endl;
 }

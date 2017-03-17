@@ -36,6 +36,7 @@ private:
     void testLists();
     void testListTiming();
     void testFoodQueue();
+    void testIntStack();
     
 public:
     DataStructureController();
