@@ -26,8 +26,7 @@ void DataStructureController :: testNodes()
 }
 void DataStructureController :: start()
 {
-    testListTiming();
-    testFoodQueue();
+    testLists();
 }
 
 void DataStructureController :: testIntArray()
@@ -75,7 +74,12 @@ void DataStructureController :: testLists()
     sample.addFront("am");
     sample.addEnd("cool");
     sample.addFront("I");
-    cout << "This should go I, am, cool" << endl;
+    cout << "The head of the list should be I and it is, " << sample->getFront() << endl;
+    cout << "The end of the list should be cool and it is, " << sample->getEnd() << endl;
+    
+    sample.setAtIndex(3, "!");
+    
+    cout << "This should go I, am, cool, !" << endl;
     
     for(int index = 0; index < sample.getSize(); index++)
     {
