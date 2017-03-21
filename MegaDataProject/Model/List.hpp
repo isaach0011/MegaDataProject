@@ -231,7 +231,7 @@ bool List<Type> :: contains(Type data)
     
     for (int index = 0; index < size; index++)
     {
-        if (current->getNodeData == data)
+        if (current->getNodeData() == data)
         {
             isInList = true;
             return isInList;

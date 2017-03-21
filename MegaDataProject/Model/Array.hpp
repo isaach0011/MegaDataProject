@@ -105,8 +105,7 @@ int Array<Type> :: getSize() const
 }
     
     
-    
-    
+
     
 template <class Type>
 Array<Type> :: ~Array()

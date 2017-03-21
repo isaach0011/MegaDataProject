@@ -26,7 +26,7 @@ void DataStructureController :: testNodes()
 }
 void DataStructureController :: start()
 {
-    testLists();
+    testDoubleList();
 }
 
 void DataStructureController :: testIntArray()
@@ -72,21 +72,23 @@ void DataStructureController :: testLists()
 {
     List<string> sample;
     sample.addFront("am");
-    sample.addEnd("cool");
+    sample.addAtIndex(1, "cool");
     sample.addFront("I");
-    cout << "The head of the list should be I and it is, " << sample->getFront() << endl;
-    cout << "The end of the list should be cool and it is, " << sample->getEnd() << endl;
+    sample.addEnd("?");
+    cout << "End should be ? and is: " << sample.getEnd()->getNodeData() << endl;
+    cout << "Head should be I and is: " << sample.getFront()->getNodeData() << endl;
     
     sample.setAtIndex(3, "!");
     
     cout << "This should go I, am, cool, !" << endl;
-    
+    sample.addEnd("Hello World");
+    sample.remove(4); //No Hello Worlds >:(
     for(int index = 0; index < sample.getSize(); index++)
     {
         cout << sample.getFromIndex(index) << endl;
     }
     
-    cout << "Size should read 3 and is " << sample.getSize() << endl;
+    cout << "Size should read 4 and is " << sample.getSize() << endl;
 }
 
 void DataStructureController :: testListTiming()
@@ -135,6 +137,10 @@ void DataStructureController :: testIntStack()
 {
     Stack<int> numberStack;
     numberStack.add(2315);
+    numberStack.push(999999);
+    cout << "The size is " << numberStack.getSize() << " it should be 2." << endl;
+    cout << "Peek is " << numberStack.peek() << " and should be 999999." << endl;
+    numberStack.remove(1);
     numberStack.push(32);
     int testValue = numberStack.pop();
     cout << "Test value is " << testValue << " and should be 32" << endl;
@@ -178,4 +184,24 @@ void DataStructureController :: testFoodQueue()
     cout << "The item removed form the queue was " << removed.getFoodName() << " and should be duncanrice." << endl;
     cout << "The front of the list is " << tastyFood.peek().getFoodName() << ", it should be fries." << endl;
     cout << "The size of the list is " << tastyFood.getSize() << "." << endl;
+}
+
+void DataStructureController :: testDoubleList()
+{
+    DoubleList<int> coolList;
+    DoubleList<int> coolFastList;
+    Timer doubleTimer;
+    doubleTimer.startTimer();
+    coolList.add(1);
+    coolList.getFromIndex(0);
+    doubleTimer.stopTimer();
+    cout << "The speed for getFromIndex was: "<< doubleTimer.getExecutionTimeInMicroseconds() << " microseconds." << endl;
+    doubleTimer.resetTimer();
+    
+    doubleTimer.startTimer();
+    coolList.add(1);
+    coolList.getFromIndexFast(0);
+    doubleTimer.stopTimer();
+    cout << "The speed for getFromIndexFast was: "<< doubleTimer.getExecutionTimeInMicroseconds() << " microseconds." << endl;
+    doubleTimer.resetTimer();
 }

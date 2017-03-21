@@ -149,7 +149,7 @@ Type DoubleList<Type> :: getFromIndexFast(int index)
         }
     }
     
-    valueAtIndex = reference->getNodeData();
+   // valueAtIndex = reference->getNodeData();
     return valueAtIndex;
 }
 #endif /* DoubleList_hpp */
