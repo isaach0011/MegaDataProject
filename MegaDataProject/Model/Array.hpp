@@ -36,6 +36,7 @@ public:
     
     void setAtIndex(int index, Type value);
     Type getFromIndex(int index);
+    int nextIndexOf(Type value, int position);
 };
 
 /*
@@ -159,5 +160,29 @@ template <class Type>
 Node<Type> * Array<Type> :: getFront() const
 {
     return front;
+}
+
+template <class Type>
+int Array<Type> :: nextIndexOf(Type value, int position)
+{
+    assert(position >= 0 && position < this->getSize());
+    
+    int nextIndex = -1;
+    
+    Node<Type> * current = this->getFront();
+    
+    for (int index = 0; index < this->getSize(); index++)
+    {
+        if(index >= position)
+        {
+            if(current->getNodeData() == value)
+            {
+                return index;
+            }
+        }
+        current = current->getNextPointer();
+    }
+    
+    return nextIndex;
 }
 #endif /* Array_hpp */
