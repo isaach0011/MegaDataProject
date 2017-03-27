@@ -9,6 +9,8 @@
 #ifndef BiDirectionalNode_hpp
 #define BiDirectionalNode_hpp
 
+#include "Node.hpp"
+
 template <class Type>
 class BiDirectionalNode : public Node<Type>
 {
