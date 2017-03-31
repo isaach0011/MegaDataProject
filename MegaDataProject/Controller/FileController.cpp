@@ -75,7 +75,7 @@ void FileController :: writeFoodItemDataStatistics(DoubleList<FoodItem> dataSour
     }
     else
     {
-        cerr << "File unavailable" << endl;
+        cerr << "FILE UNAVALIBLE" << endl;
     }
     saveFile.close();
 }
