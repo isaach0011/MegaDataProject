@@ -527,7 +527,7 @@ bg=red</panel_attributes>
       <x>336</x>
       <y>546</y>
       <w>364</w>
-      <h>203</h>
+      <h>294</h>
     </coordinates>
     <panel_attributes>Model :: BinarySearchTree&lt;Type&gt;
 --
@@ -548,6 +548,14 @@ bg=red</panel_attributes>
 - inOrderTraversal(BinarySearchTreeNode&lt;Type&gt; *) : void
 - preOrderTraversal(BinarySearchTreeNode&lt;Type&gt; *) : void
 - postOrderTraversal(BinarySearchTreeNode&lt;Type&gt; *) : void
+
++ inOrderTraversal() : void
++ preOrderTraversal() : void
++ postOrderTraversal() : void
+
++ insert(Type) : void
++ contains(Type) : bool
++ remove(Type) : void
 layer=1
 bg=orange</panel_attributes>
     <additional_attributes/>
@@ -556,7 +564,7 @@ bg=orange</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>336</x>
-      <y>784</y>
+      <y>896</y>
       <w>259</w>
       <h>245</h>
     </coordinates>
@@ -592,12 +600,12 @@ bg=yellow</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>462</x>
-      <y>742</y>
+      <y>833</y>
       <w>21</w>
-      <h>56</h>
+      <h>77</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
