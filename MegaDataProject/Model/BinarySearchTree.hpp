@@ -15,6 +15,19 @@
 template <class Type>
 class BinarySearchTree : public Tree<Type>
 {
+protected:
+    BinarySearchTreeNode<Type> * root;
+    
+    int calculateSize(BinarySearchTreNode<Type> * root);
+    int calculateHeight(BinarySearchTreeNode<Type> * root);
+    bool isBalanced(BinarySearchTreeNode<Type> * root);
+    bool  isComplete(BinarySearchTreeNode<Type> * root);
+    
+    void inOrderTraversal(BinarySearchTreeNode<Type> * inStart);
+    void preOrderTraversal(BinarySearchTreeNode<Type> * preStart);
+    void postOrderTraversal(BinarySearchTreeNode<Type> * postStart);
+    
+    void removeNode(BinarySearchTreeNode<Type> * removeMe);
 private:
     BinarySearchTreeNode<Type> * root;
     
@@ -23,7 +36,8 @@ private:
     void preOrderTraversal(BinarySearchTreeNode<Type> * preStart);
     void postOrderTraversal(BinarySearchTreeNode<Type> * postStart);
     
-    void removeNode(BinarySearchTreeNode<Type> * & removeMe);
+    void removeNode(BinarySearchTreeNode<Type> * removeMe);
+    
 public:
     BinarySearchTree();
     ~BinarySearchTree();
@@ -35,7 +49,10 @@ public:
     void preOrderTraversal();
     void postOrderTraversal();
     
-    void printToFile();
+    int getSize();
+    int getHeight();
+    bool isComplete();
+    bool isBlanced();
     
     bool contains(Type value);
     void insert(Type itemToInsert);
@@ -252,7 +269,7 @@ void BinarySearchTree<Type> :: remove(Type getRidOfMe)
 }
 
 template <class Type>
-void BinarySearcdhTree<Type> :: removeNode(BinarySearchTreeNode<Type> * & removeMe)
+void BinarySearcdhTree<Type> :: removeNode(BinarySearchTreeNode<Type> * removeMe)
 {
     BinarySearchTreeNode<Type> * current;
     BinarySearchTreeNode<Type> * previous;
