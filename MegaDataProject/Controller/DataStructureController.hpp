@@ -20,6 +20,7 @@
 #include "../Model/Queue.hpp"
 #include "../Model/CircularList.hpp"
 #include "../Model/FoodItem.hpp"
+#include "../Model/BinarySearchTree.hpp"
 #include <string>
 
 using namespace std;
@@ -38,6 +39,7 @@ private:
     void testFoodQueue();
     void testIntStack();
     void testDoubleList();
+    void testBinarySearchTreeOperations();
 public:
     DataStructureController();
     void start();
