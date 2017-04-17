@@ -570,28 +570,22 @@ bg=orange</panel_attributes>
     </coordinates>
     <panel_attributes>/Model :: Tree&lt;Type&gt;/
 --
-- size : int
-- height ; int
-- complete : bool
-- balanced : bool
---
-+ Tree() : constructor
-+ ~Tree() : destructor
 
-+ getSize() : int
+*Informational Methods*
++getSize() : int
 + getHeight() : int
 + isComplete() : bool
 + isBalanced() : bool
 
-+ setSize(int size) : void
-+ setHeight(int height) : void
-+ setComplete(bool complete) : void
-+ sestBalanced(bool balanced) : void
-
+*Traversals*
 + inOrderTraversal() : void
 + preOrderTraversal() : void
 + postOrderTraversal() : void
 
+*Data Operations*
++ insert(Type) : void
++ contains(Type) : bool
++ remove(Type) : void
 layer=1
 bg=yellow</panel_attributes>
     <additional_attributes/>
