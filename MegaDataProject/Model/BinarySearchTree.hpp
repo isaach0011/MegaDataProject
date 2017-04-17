@@ -61,7 +61,7 @@ BinarySearchTree<Type> :: ~BinarySearchTree()
     delete root;
 }
 template <class Type>
-BinarySearchTree<Type> * BinarySearchTreeNode<Type> :: getRoot()
+BinarySearchTreeNode<Type> * BinarySearchTree<Type> :: getRoot()
 {
     return this->root;
 }
@@ -90,14 +90,6 @@ void BinarySearchTree<Type> :: postOrderTraversal()
     postOrderTraversal(root);
 }
 
-//template <class Type>
-//void BinarySearchTree<Type> :: isComplete(BinarySearchTreeNode<Type> * start, int index, int size)
-//{
-//    if(start == nullptr)
-//    {
-//        return true;
-//    }
-//}
 
 template <class Type>
 bool BinarySearchTree<Type> :: isBalanced(BinarySearchTreeNode<Type> * start)
@@ -247,7 +239,7 @@ void BinarySearchTree<Type> :: insert(Type itemToInsert)
             }
         }
         
-        if(previous->getNodeDtaa() > itemToInsert)
+        if(previous->getNodeData  () > itemToInsert)
         {
             previous->setLeftChild(insertMe);
         }
@@ -393,14 +385,14 @@ void BinarySearchTree<Type> :: removeNode(BinarySearchTreeNode<Type> * removeMe)
             removeMe->setLeftChild(current->getLeftChild());
             if(current->getLeftChild() != nullptr)
             {
-                current->getLeftChild()->setRootPoitner(removeMe);
+                current->getLeftChild()->setRootPointer(removeMe);
             }
 
         }
         else
         {
             previous->setRightChild(current->getLeftChild());
-            if(current->getLeftcHIld() != nullptr)
+            if(current->getLeftChild() != nullptr)
             {
                 current->getLeftChild()->setRootPointer(previous);
             }
@@ -408,7 +400,7 @@ void BinarySearchTree<Type> :: removeNode(BinarySearchTreeNode<Type> * removeMe)
         
         delete current;
     }
-    if(removeMe ==  nullptr || removeMe->getRootPointer == nullptr)
+    if(removeMe ==  nullptr || removeMe->getRootPointer() == nullptr)
     {
         setRoot(removeMe);
     }
