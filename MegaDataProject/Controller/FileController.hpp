@@ -11,6 +11,7 @@
 
 #include "../Model/DoubleList.hpp"
 #include "../Model/FoodItem.hpp"
+#include "../Model/BinarySearchTree.hpp"
 #include "../Model/CrimeData.hpp"
 #include <string>
 #include <fstream>
@@ -26,6 +27,7 @@ private:
 public:
     DoubleList<FoodItem> readFoodItemDataFromFileAsList(string filename);
     void writeFoodItemDataStatistics(DoubleList<FoodItem> source, string filename);
+    BinarySearchTree<CrimeData> readCrimeDataToBinarySearchTree(string filename);
 };
 
 #endif /* FileController_hpp */

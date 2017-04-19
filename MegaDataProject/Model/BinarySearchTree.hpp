@@ -11,6 +11,9 @@
 
 #include "Tree.hpp"
 #include "BinarySearchTreeNode.hpp"
+#include <iostream>
+
+using namespace std;
 
 template <class Type>
 class BinarySearchTree : public Tree<Type>

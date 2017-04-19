@@ -21,6 +21,7 @@
 #include "../Model/CircularList.hpp"
 #include "../Model/FoodItem.hpp"
 #include "../Model/BinarySearchTree.hpp"
+#include "FileController.hpp"
 #include <string>
 
 using namespace std;
@@ -40,6 +41,7 @@ private:
     void testIntStack();
     void testDoubleList();
     void testBinarySearchTreeOperations();
+    void testBinarySearchData();
 public:
     DataStructureController();
     void start();

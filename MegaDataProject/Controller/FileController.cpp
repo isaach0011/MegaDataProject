@@ -79,3 +79,37 @@ void FileController :: writeFoodItemDataStatistics(DoubleList<FoodItem> dataSour
     }
     saveFile.close();
 }
+
+BinarySearchTree<CrimeData> FileController :: readCrimeDataToBinarySearchTree(string filename)
+
+{
+    
+    BinarySearchTree<CrimeData> crimeData;
+    string currentCSVLine;
+    int rowCount = 0;
+    
+    ifstream dataFile(filename);
+
+    if(dataFile.is_open())
+    {
+        while(!dataFile.eof())
+        {
+            getline(dataFile, currentCSVLine, '\r');
+            //Exclude first row headers
+            if (rowCount != 0)
+            {
+                CrimeData rowData(currentCSVLine);
+                crimeData.insert(rowData);
+            }
+            rowCount++;
+        }
+        dataFile.close();
+    }
+    else
+    {
+        cerr << "NO FILE" << endl;
+    }
+    return crimeData;
+    
+}
+
