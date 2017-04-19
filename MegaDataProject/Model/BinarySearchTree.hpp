@@ -103,7 +103,7 @@ bool BinarySearchTree<Type> :: isComplete(BinarySearchTreeNode<Type> * start, in
         return false;
     }
     
-    return (isComplete(start->getLeftChild(), 2 * index + 1, size) && isComplete(start->getRightChild, 2 * index + 2, size));
+    return (isComplete(start->getLeftChild(), 2 * index + 1, size) && isComplete(start->getRightChild(), 2 * index + 2, size));
 }
 
 template <class Type>
