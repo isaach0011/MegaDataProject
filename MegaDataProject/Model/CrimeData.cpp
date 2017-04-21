@@ -9,6 +9,10 @@
 #include "CrimeData.hpp"
 #include <cmath>
 #include <iostream>
+#include <sstream>
+
+using namespace std;
+
 CrimeData :: CrimeData()
 {
     

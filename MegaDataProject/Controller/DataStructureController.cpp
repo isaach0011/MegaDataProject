@@ -26,7 +26,7 @@ void DataStructureController :: testNodes()
 }
 void DataStructureController :: start()
 {
-    testBinarySearchTreeOperations();
+    testBinarySearchData();
 }
 
 void DataStructureController :: testIntArray()
@@ -256,7 +256,7 @@ void DataStructureController :: testBinarySearchData()
     
     treeTimer.startTimer();
     
-    BinarySearchTree<CrimeData> crimeTree = fileData.readCrimeDataToBinarySearchTree("/Users/ihil17523/Documents/crimes.csv");
+    BinarySearchTree<CrimeData> crimeTree = fileData.readCrimeDataToBinarySearchTree("/Users/ihil17523/Documents/crime.csv");
     
     treeTimer.stopTimer();
     
