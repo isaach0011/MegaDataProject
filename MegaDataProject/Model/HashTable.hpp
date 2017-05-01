@@ -119,4 +119,16 @@ long HashTable<Type> :: handleCollision(HashNode<Type> * data, long currentPosit
     
     return -1;
 }
+
+template <class Type>
+void HashTable<Type> :: displayContents()
+{
+    for(long index = 0; index < capacity; index++)
+    {
+        if(hashTableStorage[index] != nullptr)
+        {
+            cout << index << ": " << hashTableStorage[index]->getData() << endl;
+        }
+    }
+}
 #endif /* HashTable_h */
