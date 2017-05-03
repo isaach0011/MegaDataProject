@@ -26,7 +26,7 @@ void DataStructureController :: testNodes()
 }
 void DataStructureController :: start()
 {
-    testBinarySearchData();
+    testBinarySearchTreeOperations();
 }
 
 void DataStructureController :: testIntArray()
@@ -212,6 +212,8 @@ void DataStructureController :: testBinarySearchTreeOperations()
     
     BinarySearchTree<int> numbers;
     
+    cout << "Size should be 0 and is: " << numbers.getSize() << endl;
+    
     numbers.insert(9843);
     
     numbers.insert(10);
@@ -220,11 +222,17 @@ void DataStructureController :: testBinarySearchTreeOperations()
     
     numbers.insert(-123);
     
+    numbers.preOrderTraversal();
+    
+    cout << "Size should be 4 and is: " << numbers.getSize() << endl;
+    
     numbers.insert(23465);
     
     numbers.insert(10); // won't go in
     
     numbers.insert(43243);
+    
+    numbers.postOrderTraversal();
     
     numbers.insert(-45677654);
     
@@ -235,7 +243,7 @@ void DataStructureController :: testBinarySearchTreeOperations()
     cout << "Size should be 8 and is: " << numbers.getSize() << endl;
     
     cout << "In order traversal should be: \n\t-45677654 \n\t-123 \n\t10 \n\t43 \n\t9843 \n\t23465 \n\t43243 \n\t92165" << endl;
-    
+
     numbers.inOrderTraversal();
     
     
