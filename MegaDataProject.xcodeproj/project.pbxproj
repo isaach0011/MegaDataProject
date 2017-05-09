@@ -60,6 +60,7 @@
 		BFDE0D021E49045E00DFA076 /* MegaDataProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MegaDataProject; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDE0D0C1E490F0900DFA076 /* IntNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IntNode.cpp; path = Model/IntNode.cpp; sourceTree = "<group>"; };
 		BFDE0D0D1E490F0900DFA076 /* IntNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IntNode.hpp; path = Model/IntNode.hpp; sourceTree = "<group>"; };
+		BFE0F39F1EC234C4000057D5 /* Graph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Graph.h; path = Model/Graph.h; sourceTree = "<group>"; };
 		BFEBF4571E6F4A7600F42BE0 /* Stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Stack.hpp; path = Model/Stack.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +148,7 @@
 				BF3296601EA7EE9600BEC625 /* AVLTree.hpp */,
 				BF061BAD1EB7B22600C0BE8E /* HashTable.hpp */,
 				BF061BAE1EB7B4EE00C0BE8E /* HashNode.hpp */,
+				BFE0F39F1EC234C4000057D5 /* Graph.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";
