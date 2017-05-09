@@ -22,6 +22,7 @@
 #include "../Model/FoodItem.hpp"
 #include "../Model/BinarySearchTree.hpp"
 #include "../Model/HashTable.hpp"
+#include "../Model/Graph.hpp"
 #include "FileController.hpp"
 #include <string>
 
