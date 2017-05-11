@@ -44,6 +44,7 @@ private:
     void testDoubleList();
     void testBinarySearchTreeOperations();
     void testBinarySearchData();
+    void testGraph();
 public:
     DataStructureController();
     void start();

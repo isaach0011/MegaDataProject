@@ -289,3 +289,10 @@ void DataStructureController :: testBinarySearchData()
     
     
 }
+
+void DataStructureController :: testGraph()
+{
+    Graph<string> connectedWords;
+    
+    
+}
