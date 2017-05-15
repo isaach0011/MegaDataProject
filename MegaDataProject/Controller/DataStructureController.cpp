@@ -26,7 +26,7 @@ void DataStructureController :: testNodes()
 }
 void DataStructureController :: start()
 {
-    testBinarySearchTreeOperations();
+    testGraph();
 }
 
 void DataStructureController :: testIntArray()
@@ -293,6 +293,26 @@ void DataStructureController :: testBinarySearchData()
 void DataStructureController :: testGraph()
 {
     Graph<string> connectedWords;
+    
+    connectedWords.addVertex("Money");
+    connectedWords.addVertex("Power");
+    connectedWords.addVertex("Pain");
+    connectedWords.addVertex("Suffering");
+    connectedWords.addVertex("Word Domination");
+    connectedWords.addVertex("Hello World");
+    connectedWords.addVertex("while(7)");
+    
+    connectedWords.addEdge(0,6);
+    connectedWords.addEdge(1,5);
+    connectedWords.addEdge(2,4);
+    connectedWords.addEdge(3,3);
+    connectedWords.addEdge(4,2);
+    connectedWords.addEdge(5,1);
+    connectedWords.addEdge(6,0);
+
+    connectedWords.breadthFirstTraversal(connectedWords, 2);
+    
+    connectedWords.depthFirstTraversal(connectedWords, 0);
     
     
 }

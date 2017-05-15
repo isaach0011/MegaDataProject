@@ -58,47 +58,56 @@ public:
     Type findMaximum();
 };
 
+//sets root pointer to null pointer
 template <class Type>
 BinarySearchTree<Type> :: BinarySearchTree() : Tree<Type>()
 {
     this->root = nullptr;
 }
 
+//deletes root pointer
 template <class Type>
 BinarySearchTree<Type> :: ~BinarySearchTree()
 {
     delete root;
 }
+
+//returns the root pointer
 template <class Type>
 BinarySearchTreeNode<Type> * BinarySearchTree<Type> :: getRoot()
 {
     return this->root;
 }
 
+//sets the root to parameter
 template <class Type>
 void BinarySearchTree<Type> :: setRoot(BinarySearchTreeNode<Type> * root)
 {
     this->root = root;
 }
 
+//calls the inOrderTraversal method with the root parameter
 template <class Type>
 void BinarySearchTree<Type> :: inOrderTraversal()
 {
     inOrderTraversal(root);
 }
 
+//calls the preOrderTraversal method with the root parameter
 template <class Type>
 void BinarySearchTree<Type> :: preOrderTraversal()
 {
     preOrderTraversal(root);
 }
 
+//calls the postOrderTraversal method with the root parameter
 template <class Type>
 void BinarySearchTree<Type> :: postOrderTraversal()
 {
     postOrderTraversal(root);
 }
 
+//checks if 
 template <class Type>
 bool BinarySearchTree<Type> :: isComplete(BinarySearchTreeNode<Type> * start, int index, int size)
 {
