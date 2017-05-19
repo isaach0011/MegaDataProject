@@ -45,6 +45,7 @@ private:
     void testBinarySearchTreeOperations();
     void testBinarySearchData();
     void testGraph();
+    void testHash();
 public:
     DataStructureController();
     void start();

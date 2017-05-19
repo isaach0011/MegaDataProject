@@ -26,7 +26,7 @@ void DataStructureController :: testNodes()
 }
 void DataStructureController :: start()
 {
-    testGraph();
+    testHash();
 }
 
 void DataStructureController :: testIntArray()
@@ -315,4 +315,24 @@ void DataStructureController :: testGraph()
     connectedWords.depthFirstTraversal(connectedWords, 0);
     
     
+}
+
+void DataStructureController :: testHash()
+{
+    HashTable<string> stringTable;
+    
+    stringTable.add("Yes");
+    stringTable.add("No");
+    stringTable.add("Maybe?");
+    stringTable.add("Probably not");
+    stringTable.add("Probably yes");
+    stringTable.add("Ok");
+    stringTable.add("Sure thing");
+    stringTable.add("Alright");
+    stringTable.add("I got it");
+    stringTable.add("Fine");
+    stringTable.add("while(7)");
+    stringTable.add("Hello World");
+    
+    stringTable.displayContents();
 }
